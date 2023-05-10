@@ -22,4 +22,4 @@ The references of some pages
 ![image](https://github.com/468339236/the-rahine-lab/assets/25878851/09819cc1-102d-46c8-8455-cd04e8f72a88)
 
 
-To implement this web application, you can use HTML, CSS, and JavaScript for the main structure. Vue and router will be employed for simple interface switching, and JavaScript will be utilized to process input data and judge its legality. This project focuses on providing a secure and user-friendly platform to access and manage the company's internal database.
+To implement this web application, i use HTML, CSS, and JavaScript for the main structure. Vue and router will be employed for simple interface switching, and JavaScript will be utilized to process input data and judge its legality. This project focuses on providing a secure and user-friendly platform to access and manage the company's internal database.
