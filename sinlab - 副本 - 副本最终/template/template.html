@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="mycss1.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <title>RHINElab</title>
+</head>
+<style>
+   
+</style>
+<body>
+    <div class="header">   
+        <nav id="navbar">      
+            <img src="./images/logo1.gif" class="logo">         <!--导航条-->          
+               <!-- <div class="logo">
+                    <span>RHINE LAB</span>
+                </div>-->
+                <ul id="menu">
+                    <li><a href="../nav - 副本.html">aboutlab</a></li>
+                    <li><a href="#">template</a></li>
+                    <li><a href="https://www.hypergryph.com/">product</a></li>
+                    <li><a href="#">appointment</a></li>
+                    <li><a href="../login1/main.html">login</a></li>
+                    
+                </ul>
+        </nav>
+    </div>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias similique atque maiores iusto voluptates eaque? Fugiat est aspernatur rerum eligendi maxime ea nulla molestias quod reiciendis quia ex, expedita illo, eveniet odio error sequi corrupti! Atque sunt molestiae laborum, quas sapiente et quisquam pariatur nisi iusto sequi eos commodi odio sint, debitis hic repellendus laboriosam dicta dolorem! Deserunt eius deleniti quam? Perferendis sunt est, architecto quasi fuga possimus veritatis animi sint corrupti doloribus sapiente voluptas. Distinctio placeat, qui similique quisquam excepturi reprehenderit officiis commodi 
+        doloribus exercitationem eligendi <font color="white">At present, the ecological and energy divisions of Rhine Life seem to be engaged in struggle.</font>architecto ratione corporis repudiandae eum dicta consequatur hic earum ipsum ex quibusdam at.</p>
+    <div id="root" class="rooter">
+            <router-link to="/"> secret |</router-link>
+            <router-link to="/rules">rules |</router-link>
+            <router-link to="/error"> error |</router-link>
+            <router-link to="/error"> error |</router-link>
+            <router-link to="/permission"> permission denied </router-link>
+            <router-view></router-view>
+    </div>  
+    <a id="bottom" href="#">
+            <button id="returnTop">
+                    <span class="material-symbols-outlined">
+                        arrow_upward
+                    </span>
+            </button>
+            
+    </a>
+</body>
+<script type="text/javascript" src="mysc1.js"></script>
+<script>
+    const home = {template:'<div class="father"><h1>FILE::1Rhine Life(LLCs) Headquarters, a hotbed for science and technology, is a dream place for countless researchers.The lights in the building stay on all night, and experiments and data never stop..</h1></div>',}
+    const news = {template:`<div class="father"><h1> File number：： C-023 confidentiality: Highly confidential inner using Related archive :dlabosic crisis
+</h1></div>`,}
+    const sons = {
+        template:`{{error[this.$route.params.id-1].desc}}`,
+        data(){
+            return {
+                error:[
+                        {id:1,name:'saria',desc:'Hello saria'},
+                        {id:2,name:'mostima',desc:'Hello mostima'},
+                        {id:3,name:'iasmla',desc:'Hello isamla'}
+                    ]
+            }
+        }
+    }
+    const error = {
+        template:`  <div >
+                        <h1>error #00001{{this.$route.params.id}}</h1>
+                        <ul>
+                            <li v-for="error in error" :key="error.id">
+                                <router-link :to="'/error/error/'+error.id">{{error.name}}</router-link>
+                            </li>
+                        </ul>
+                        <div class='son'>
+                            <img src="../images/22.png">
+                            <router-view></router-view>
+                        </div>
+                    </div>`,
+        data(){
+            return {
+                error:[
+                        {id:1,name:'saria',desc:'Hello saria'},
+                        {id:2,name:'mostima',desc:'Hello mostima'},
+                        {id:3,name:'iasmla',desc:'Hello isamla'}
+                ]
+            }
+        }
+    }
+    const videos = {template:`<div class="father"><h1>ILLICIT ACCESS DETECTED PERMISSION DENIED EXITING THE DATABASE PORTAL</h1></div>`,}
+    const routes = [
+        {path:'/',component:home},
+        {path:'/rules',component:news},
+        {
+            path:'/error',
+            component:error,
+            children:[
+                {
+                    path:'error/:id',
+                    component:sons,
+                },
+            ],
+        },
+        {path:'/permission',component:videos},
+        
+    ];
+    const router = VueRouter.createRouter({
+        history: VueRouter.createWebHashHistory(),
+        routes,
+    })
+    const vm =Vue.createApp({})
+    vm.use(router)
+    vm.mount("#root")
+   
+</script>
+    </html>

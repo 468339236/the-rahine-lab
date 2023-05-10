@@ -1,0 +1,267 @@
+@import url('https://fonts.font.im/css?family=Righteous');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+    .header{
+    width:100%;
+    height: 100vh;
+    background-image: url(images/head.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color:#fff;
+}
+    nav{
+        width:100%;
+        padding:20px 0;
+        text-align: center;
+    }
+    .logo{
+        width: 100px;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+    nav ul{
+        background:#000;
+        width: 100%;
+        margin-top: 10px;
+    }
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 20px 20px;
+        color:#fff;
+    }
+    a{
+        color: #fff;
+    }
+    .text{
+        padding: 20px 8%;
+    }
+    nav.sticky{
+        position: fixed;
+        top:0;
+        left:0;
+        padding: 8px 1%;
+        background:#000;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        transition: padding 0.5s;
+        
+    }
+    nav.sticky ul{
+        width: auto;
+    } 
+    a:hover {
+	border-color: #FCEE21;
+	color: #FCEE21;
+    }/*circle tag*/   
+    #returnTop{
+        width: 60px;
+        height: 60px;
+        color: #fefdfd;
+        font-family: "微软雅黑";
+        font-size: 20px;
+        text-align: center;
+        line-height: 60px;
+        position: fixed;
+        right: 20px;
+        bottom: 10px;
+        background-color: rgb(46, 43, 40);
+        border-radius: 50%;
+        border: 2px solid #666666;
+        cursor: default;
+        display: block;
+        }
+
+    #returnTop:hover {
+	border-color: #FCEE21;
+	color: #FCEE21;
+    }/*circle tag*/
+    #beforetxt{
+        width:100%;
+        height: 50vh;
+        background-position: center;
+        background-size: cover;
+        background-color:rgb(255, 255, 255);
+
+    }
+    .circle{
+        width: 10vh;
+        height: 50vh;
+        border-radius: 50%;
+        color: #070707;
+        font-size: 6vh;
+        font-weight: bold;
+        /* 转大写 */
+        text-transform: uppercase;
+        /* 使用引入的字体 */
+        font-family: 'Righteous';
+        text-align: center;
+        /* 执行动画：动画名 时长 线性 无限次播放 */
+        animation: spin 20s linear infinite;
+    }
+    .circle span{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .circle1{
+        margin-left: 1400px;
+        width: 10vh;
+        height: 50vh;
+        border-radius: 50%;
+        color: #070707;
+        font-size: 6vh;
+        font-weight: bold;
+        /* 转大写 */
+        text-transform: uppercase;
+        /* 使用引入的字体 */
+        font-family: 'Righteous';
+        text-align: center;
+        /* 执行动画：动画名 时长 线性 无限次播放 */
+        animation: spin 20s linear infinite;
+    }
+    .circle1 span{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    
+    /* 定义动画 */
+    @keyframes spin {
+        0%{
+            transform: rotate(360deg);
+        }
+        100%{
+            transform: rotate(0);
+        }
+    }
+    .boxslide{
+        height: 200hv;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at top,rgb(233,232,227),rgb(230, 230, 226));
+    }
+    .continer{
+        display: flex;
+        width: 170vw;
+        max-width: 900px;
+        border: 1px solid rgb(226, 218, 218);
+        height:400px;
+        overflow: hidden;  
+     }
+    .item{
+        position: relative;
+        width: 60px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 30px;
+        transition:0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+        /*mataining original size &cut longeredges*/
+        background-size: cover;
+        background-position: centers;
+        transition:0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+        overflow: hidden;
+        display: inline-block;
+    }
+    .item .shadow{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        transition:0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+        overflow: hidden;
+    }
+    .item .content{
+        display: flex;
+        position: absolute;
+        bottom: 10px ;
+        left: 10px;
+        right: 0;
+        height: 40px;
+        transition:0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+    }
+    .item .content .icon{
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(241, 235, 235, 0.449);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 16px;
+        transition:0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+    }
+    .item:nth-child(1).material-symbols-outlined{
+        color:#bfa;
+    }
+    .item .content .textf{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 10px;
+        color: #fff;
+        width: 100%;
+        transition:0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+    }
+    .item .content .textf div{
+       width: calc(100%-70px);/*over show ，，，，，，*/
+       text-overflow: ellipsis;
+       overflow: hidden;
+       white-space: nowrap;
+       opacity: 0;
+       transition: opacity 0.5s ease-out;
+    }
+    .item .content .textf .title{
+        font-weight: bold;
+        font-size: 18px;
+        color: #fff;
+      }
+      .item .content .textf .sub{
+        transition-delay:0.1s ;/*delay show*/
+      }
+    .item.active{
+        flex: 1;
+        margin: 0;
+        transition:0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+      }
+    .item.active .shadow{
+        background: linear-gradient(to top,rgba(0,0,0,0,0.35),65%,transparent);
+        margin: 0;
+        transition:0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+      }
+     .item.active .content{
+        bottom: 20px;
+        left: 20px;
+        transition:0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+      }
+      .item.active .content .textf div{
+        opacity: 1;
+      }
+
+      .footer{
+        height: 100px;
+        display: flex;
+        margin-left: auto;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at top,rgb(233,232,227),rgb(230, 230, 226));
+      }
+      .footer1{
+        height: 200px;
+        display: flex;
+        display: inline-block;
+      }
+
+
